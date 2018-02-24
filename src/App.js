@@ -53,14 +53,6 @@ class App extends Component {
 	};
 
 	render() {
-		const style = {
-			backgroundColor: 'green',
-			color: 'white',
-			border: '1px solid blue',
-			padding: '16px',
-			cursor: 'pointer'
-		};
-
 		let persons = null;
 
 		if (this.state.showPersons) {
@@ -79,8 +71,6 @@ class App extends Component {
 					))}
 				</div>
 			);
-
-			style.backgroundColor = 'red';
 		}
 
 		const assignedClasses = [];
@@ -100,7 +90,6 @@ class App extends Component {
 					This is really working!
 				</p>
 				<button
-					style={style}
 					/* onClick={this.switchNameHandler.bind(this, 'Ruben')} */
 
 					onClick={this.togglePersonHandler}
