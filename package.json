@@ -6,6 +6,7 @@
     "ajv": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.0",
     "prettier": "^1.10.2",
+    "radium": "^0.22.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1"
