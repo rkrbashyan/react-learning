@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classes from './Person.css';
 
 class Person extends Component {
@@ -13,6 +14,9 @@ class Person extends Component {
 
 	componentDidMount() {
 		console.log('[Person.js] inside componentDidMount');
+		if (this.props.position === 0) {
+			this.inputElement.focus();
+		}
 	}
 
 	render() {
@@ -24,6 +28,7 @@ class Person extends Component {
 				</p>
 				<p>{this.props.children}</p>
 				<input
+					ref={(input) => {this.inputElement = input}}
 					type="text"
 					onChange={this.props.changed}
 					value={this.props.name}
@@ -32,5 +37,12 @@ class Person extends Component {
 		);
 	}
 }
+
+Person.propTypes = {
+	click: PropTypes.func,
+	name: PropTypes.string,
+	age: PropTypes.number,
+	changed: PropTypes.func
+};
 
 export default Person;
